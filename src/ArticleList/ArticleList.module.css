@@ -1,0 +1,9 @@
+.articleList {
+    background-color: #9b9999;
+    box-shadow: red 0px 0px 15px;
+    border: 2px #828485 dotted;
+    border-radius: 12px;
+    margin: 25px;
+    padding: 15px;
+    list-style: none;
+  }

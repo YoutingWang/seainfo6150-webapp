@@ -1,17 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { Switch, Route } from "react-router-dom";
-import ArticleList from "./ArticleList/ArticleList.jsx";
+import DynamicArticle from "./DynamicArticle/DynamicArticle.jsx";
 import { isEmpty } from "lodash";
+import ArticleList from "./ArticleList/ArticleList.jsx";
 
 function App() {
-  const [fetchedData, setFetchedData] = useState();
+  const [fetchedData, setFetchedData] = useState({});
 
   useEffect(() => {
     const fetchData = async () => {
       // performs a GET request
       const response = await fetch("http://demo1390455.mockable.io/articles");
       const responseJson = await response.json();
-      setFetchedData(Object.values(responseJson));
+      setFetchedData(responseJson);
     };
 
     if (isEmpty(fetchedData)) {
@@ -19,12 +20,27 @@ function App() {
     }
   }, [fetchedData]);
 
-  return isEmpty(fetchedData) ? null : (
+  let displayContent;
+
+  if (!isEmpty(fetchedData)) {
+    displayContent = (
     <div className="App">
       <Switch>
-        <Route exact path="/articlelist"><ArticleList articles={fetchedData} /></Route>
+        <Route path="/" exact>
+          <DynamicArticle article={Object.values(fetchedData)[1]} />
+        </Route>
+        <Route path="/articlelist">
+          <ArticleList articles={Object.values(fetchedData)}/>
+        </Route>
       </Switch>
     </div>
+    );
+  } else {
+    displayContent = <div>You have no data!</div>;
+  }
+
+  return (
+    displayContent
   );
 }
 
