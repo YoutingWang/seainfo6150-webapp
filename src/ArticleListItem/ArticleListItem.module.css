@@ -2,14 +2,18 @@
     font-weight: bold;
     color: #ca0303;
     margin-top: 0.2em;
+    text-decoration: underline;
 }
 .articleBody{
     margin-bottom: 20px; 
     background: linear-gradient(to right, #bb3b3b, white 20%);
     box-shadow: 4px 4px 7px;
-    padding: 0 13px 13px 13px;
+    padding: 0 8px 8px 8px;
     border: 2px solid #b40303;
     border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .dateTime {
     font-weight: bold;
