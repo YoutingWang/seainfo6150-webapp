@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ArticleTextToggleButton tests renders correctly after Show less button is clicked 1`] = `
+<div>
+  <button
+    class="toggleButton"
+  >
+    Show less
+  </button>
+</div>
+`;
+
+exports[`ArticleTextToggleButton tests renders correctly after Show more button is clicked 1`] = `
+<div>
+  <button
+    class="toggleButton"
+  >
+    Show more
+  </button>
+</div>
+`;
+
+exports[`ArticleTextToggleButton tests renders correctly when button is Show less 1`] = `
+<div>
+  <button
+    class="toggleButton"
+  >
+    Show less
+  </button>
+</div>
+`;
+
+exports[`ArticleTextToggleButton tests renders correctly when button is Show more 1`] = `
+<div>
+  <button
+    class="toggleButton"
+  >
+    Show more
+  </button>
+</div>
+`;

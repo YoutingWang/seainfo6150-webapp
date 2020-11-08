@@ -6,10 +6,6 @@
     margin: 25px;
     padding: 15px;
     list-style: none;
-    display: grid;
-    grid-auto-flow: row;
-    grid-template-columns: 1fr 1fr 1fr; 
-    grid-template-rows: auto;
     align-items: stretch;
     column-gap: 15px;
     row-gap: 5px;
@@ -17,4 +13,46 @@
   .articleGrid {
     display: grid;
     grid-auto-flow: row;
-  }
+  } 
+
+  @supports (display: grid) {
+    .articleGrid {
+      display: grid;
+      grid-auto-flow: row;
+    }
+    .articleList {
+      background-color: #9b9999;
+      border: 2px #828485 dotted;
+      list-style: none;
+      display: grid;
+      grid-auto-flow: row;
+      grid-template-rows: auto;
+      align-items: stretch;
+      box-shadow: red 0px 0px 15px;
+      column-gap: 15px;
+      row-gap: 2px;
+      border-radius: 12px;
+      margin: 15px;
+      padding: 10px;
+      grid-template-columns: 1fr; 
+      font-size: 105%;
+    }
+    @media screen and (min-width: 550px) {
+      .articleList {
+        grid-template-columns: 1fr 1fr; 
+        font-size: 100%;
+      }
+    }
+    @media screen and (min-width: 900px) {
+      .articleList {
+        grid-template-columns: 1fr 1fr 1fr; 
+        font-size: 90%;
+      }
+    }
+    @media screen and (min-width: 1300px) {
+      .articleList {
+        grid-template-columns: 1fr 1fr 1fr 1fr; 
+        font-size: 80%;
+      }
+    }
+  } 
