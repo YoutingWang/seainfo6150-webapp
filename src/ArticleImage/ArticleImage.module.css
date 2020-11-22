@@ -1,0 +1,11 @@
+.image{
+    height: auto;
+    width: 45%;
+    margin-top: 2%;
+    margin-bottom: 7%;
+    margin-left: 2%;
+    margin-right: 10%;
+    box-shadow: 4px 4px 4px #91a3b0;
+    border: 7px #c00 solid ;
+    border-radius: 60%;
+}
